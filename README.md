@@ -30,8 +30,8 @@ The _index.html_ file in the proyect looks as the following
 ## Attributes
 
 Web Component *yagc* allows the following attributes:
-- *hexFillColor*: the hexadecimal code color to fill. Default, '#151513',
-- *hexColor*: the hexadecimal code color for the saluting cat. Default, '#fff',
+- *hexColor*: the hexadecimal code color for the saluting cat. Default, '#fff'.
+- *hexFillColor*: the hexadecimal code color to fill. Default, '#151513'.
 - *leftCorner*: include to put on the left. Default, it is on the right.
 - *url*: URL to be linked. Default, 'https://github.com/'
 

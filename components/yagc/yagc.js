@@ -2,8 +2,8 @@ class YaGc extends HTMLElement {
 
     #custom = {};
     #defaults = {
-        hexFillColor: '#151513',
         hexColor: '#fff',
+        hexFillColor: '#151513',
         leftCorner: false,
         openInNewWindow: false,
         url: 'https://github.com/'
