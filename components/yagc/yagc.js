@@ -29,6 +29,8 @@ ya-gc {
     margin: 0;
     height: 80px;
     width: 80px;
+
+    z-index: 2147483647;
 }
 `
 
