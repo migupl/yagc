@@ -1,5 +1,6 @@
 class YaGc extends HTMLElement {
 
+    #custom = {};
     #defaults = {
         hexFillColor: '#151513',
         hexColor: '#fff'
@@ -11,8 +12,9 @@ class YaGc extends HTMLElement {
     }
 
     connectedCallback() {
+        this.#setCustomAttributes()
         this.#addWcStyle()
-        this.#addGithubCorner(this.#defaults)
+        this.#addGithubCorner()
     }
 
     #addWcStyle = () => {
@@ -31,11 +33,11 @@ ya-gc {
         this.appendChild(styleEl)
     }
 
-    #addGithubCorner = (options) => {
+    #addGithubCorner = () => {
         const anchorEl = document.createElement('a');
         anchorEl.classList.add('ya-wc-github-corner')
         anchorEl.href = 'https://github.com/migupl/yagc'
-        anchorEl.innerHTML = this.#githubCorner(options)
+        anchorEl.innerHTML = this.#githubCorner(this.#custom)
 
         this.shadowRoot.appendChild(anchorEl)
     }
@@ -50,6 +52,11 @@ ya-gc {
           fill="currentColor" class="octo-body"></path>
 </svg>
 `
+
+    #setCustomAttributes = () => {
+        this.#custom.hexFillColor = this.getAttribute('hexFillColor') || this.#defaults.hexFillColor
+        this.#custom.hexColor = this.getAttribute('hexColor') || this.#defaults.hexColor
+    }
 }
 
 customElements.define('ya-gc', YaGc)
