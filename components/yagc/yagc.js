@@ -3,7 +3,8 @@ class YaGc extends HTMLElement {
     #custom = {};
     #defaults = {
         hexFillColor: '#151513',
-        hexColor: '#fff'
+        hexColor: '#fff',
+        url: 'https://github.com/'
     };
 
     constructor() {
@@ -36,7 +37,7 @@ ya-gc {
     #addGithubCorner = () => {
         const anchorEl = document.createElement('a');
         anchorEl.classList.add('ya-wc-github-corner')
-        anchorEl.href = 'https://github.com/migupl/yagc'
+        anchorEl.href = this.#custom.url
         anchorEl.innerHTML = this.#githubCorner(this.#custom)
 
         this.shadowRoot.appendChild(anchorEl)
@@ -54,8 +55,11 @@ ya-gc {
 `
 
     #setCustomAttributes = () => {
-        this.#custom.hexFillColor = this.getAttribute('hexFillColor') || this.#defaults.hexFillColor
-        this.#custom.hexColor = this.getAttribute('hexColor') || this.#defaults.hexColor
+        this.#custom = {
+            hexFillColor: this.getAttribute('hexFillColor') || this.#defaults.hexFillColor,
+            hexColor: this.getAttribute('hexColor') || this.#defaults.hexColor,
+            url: this.getAttribute('url') || this.#defaults.url
+        }
     }
 }
 
