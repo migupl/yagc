@@ -33,7 +33,8 @@ Web Component *yagc* allows the following attributes:
 - *hexColor*: the hexadecimal code color for the saluting cat. Default, '#fff'.
 - *hexFillColor*: the hexadecimal code color to fill. Default, '#151513'.
 - *leftCorner*: include to put on the left. Default, it is on the right.
-- *url*: URL to be linked. Default, 'https://github.com/'
+- *openInNewWindow*: open the link in a new window.
+- *url*: URL to be linked. Default, 'https://github.com/'.
 
 ## An example with the GitHub corner on the left
 
