@@ -57,6 +57,8 @@ shows
 
 A [container is used for hot reloading](https://github.com/migupl/hot-reloading-container) during development.
 
+[Enter a color and generate nice Color Palettes](https://mycolor.space/)
+
 ## License
 
 [MIT license](http://www.opensource.org/licenses/mit-license.php)
