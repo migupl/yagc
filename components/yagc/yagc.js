@@ -46,6 +46,7 @@ ya-gc {
         const anchorEl = document.createElement('a');
         anchorEl.classList.add('ya-wc-github-corner')
         anchorEl.href = this.#custom.url
+        anchorEl.rel = 'noopener noreferrer'
         anchorEl.innerHTML = this.#githubCorner(this.#custom)
 
         this.shadowRoot.appendChild(anchorEl)
