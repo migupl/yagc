@@ -8,7 +8,7 @@ Good luck and I hope you enjoy it.
 
 ## Install
 
-Copy the directory */components/yagc/* to any directory in your project.
+Copy the JavaScript file */components/yagc.js* to any directory in your project.
 
 ## Getting started
 
@@ -16,7 +16,7 @@ To get started you need to import the Web Component
 
 ```html
 <head>
-    <script type="module" src="./components/yagc/yagc.js"></script>
+    <script type="module" src="./components/yagc.js"></script>
 </head>
 <body>
     <ya-gc></ya-gc>
@@ -42,7 +42,7 @@ The following HTML code
 
 ```html
 <head>
-    <script type="module" src="./components/yagc/yagc.js"></script>
+    <script type="module" src="./components/yagc.js"></script>
 </head>
 <body>
     <ya-gc></ya-gc>
