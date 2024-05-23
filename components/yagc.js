@@ -1,6 +1,7 @@
 ;(() => {
     class YaGc extends HTMLElement {
 
+        #shadow;
         #custom = {};
         #defaults = {
             hexColor: '#fff',
@@ -12,7 +13,7 @@
 
         constructor() {
             super()
-            this.attachShadow({ mode: 'open' })
+            this.#shadow = this.attachShadow({ mode: 'open' })
         }
 
         connectedCallback() {
@@ -54,7 +55,7 @@ ya-gc {
             if (openInNewWindow)
                 anchorEl.target = '_blank'
 
-            this.shadowRoot.appendChild(anchorEl)
+            this.#shadow.appendChild(anchorEl)
         }
 
         #githubCorner = ({ hexFillColor, hexColor, leftCorner }) => leftCorner ? this.#githubCornerLeft({ hexFillColor, hexColor }) :
@@ -112,7 +113,7 @@ ya-gc {
     }
 }
 `
-            this.shadowRoot.appendChild(styleEl)
+            this.#shadow.appendChild(styleEl)
         }
 
         #setCustomAttributes = () => {
