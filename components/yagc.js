@@ -43,6 +43,22 @@ ya-gc {
             }
         }
 
+        #gitHubCornerLink = config => {
+            const { url, openInNewWindow } = config;
+
+            const element = document.createElement('a');
+            element.classList.add('ya-wc-github-corner')
+            element.href = url
+            element.rel = 'noopener noreferrer'
+            element.innerHTML = this.#gitHubCornerImage(config).html
+            if (openInNewWindow)
+                element.target = '_blank'
+
+            return {
+                element
+            }
+        }
+
         #addGithubCorner = () => {
             const { url, openInNewWindow } = this.#custom;
             const anchorEl = document.createElement('a');
