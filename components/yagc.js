@@ -1,7 +1,6 @@
 ;((defaultConfig) => {
     class YaGc extends HTMLElement {
 
-        #shadow;
         #custom = {};
 
         constructor() {
@@ -9,7 +8,7 @@
         }
 
         connectedCallback() {
-            this.#shadow = this.attachShadow({ mode: 'open' })
+            const shadow = this.attachShadow({ mode: 'open' })
             this.#custom = {
                 hexFillColor: this.getAttribute('hexFillColor') || defaultConfig.hexFillColor,
                 hexColor: this.getAttribute('hexColor') || defaultConfig.hexColor,
@@ -20,8 +19,8 @@
 
             this.appendChild(this.#yagcStyle().element)
 
-            this.#shadow.appendChild(this.#gitHubCornerStyle().element)
-            this.#shadow.appendChild(this.#gitHubCornerLink(this.#custom).element)
+            shadow.appendChild(this.#gitHubCornerStyle().element)
+            shadow.appendChild(this.#gitHubCornerLink(this.#custom).element)
         }
 
         #yagcStyle = () => {
