@@ -19,7 +19,8 @@
             }
 
             this.appendChild(this.#yagcStyle().element)
-            this.#addCorner()
+            this.#addGithubCornerStyle()
+            this.#addGithubCorner()
         }
 
         #yagcStyle = () => {
@@ -39,11 +40,6 @@ ya-gc {
             return {
                 element
             }
-        }
-
-        #addCorner = () => {
-            this.#addGithubCornerStyle()
-            this.#addGithubCorner()
         }
 
         #addGithubCorner = () => {
