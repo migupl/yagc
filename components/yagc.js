@@ -3,7 +3,7 @@
 
         #shadow;
         #custom = {};
-        defaults = {
+        defaultConfig = {
             hexColor: '#fff',
             hexFillColor: '#151513',
             leftCorner: false,
@@ -124,11 +124,11 @@ ya-gc {
 
         #setCustomAttributes = () => {
             this.#custom = {
-                hexFillColor: this.getAttribute('hexFillColor') || this.defaults.hexFillColor,
-                hexColor: this.getAttribute('hexColor') || this.defaults.hexColor,
+                hexFillColor: this.getAttribute('hexFillColor') || this.defaultConfig.hexFillColor,
+                hexColor: this.getAttribute('hexColor') || this.defaultConfig.hexColor,
                 leftCorner: this.hasAttribute('leftCorner'),
                 openInNewWindow: this.hasAttribute('openInNewWindow'),
-                url: this.getAttribute('url') || this.defaults.url
+                url: this.getAttribute('url') || this.defaultConfig.url
             }
         }
     }
