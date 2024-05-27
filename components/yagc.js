@@ -18,7 +18,7 @@
                 url: this.getAttribute('url') || defaultConfig.url
             }
 
-            this.#addWcStyle()
+            this.appendChild(this.#yagcStyle().element)
             this.#addCorner()
         }
 
@@ -39,24 +39,6 @@ ya-gc {
             return {
                 element
             }
-        }
-
-        #addWcStyle = () => {
-            const styleEl = document.createElement('style');
-            styleEl.textContent = `
-ya-gc {
-    position: absolute;
-    top: 0;
-    ${this.#custom.leftCorner ? 'left: 0;' : 'right: 0;'}
-    margin: 0;
-    height: 80px;
-    width: 80px;
-
-    z-index: 2147483647;
-}
-`
-
-            this.appendChild(styleEl)
         }
 
         #addCorner = () => {
