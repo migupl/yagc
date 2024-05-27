@@ -45,7 +45,7 @@ The following HTML code
     <script type="module" src="./components/yagc.js"></script>
 </head>
 <body>
-    <ya-gc></ya-gc>
+    <ya-gc leftCorner></ya-gc>
 </body>
 ```
 
