@@ -20,7 +20,7 @@
             this.appendChild(this.#yagcStyle().element)
 
             shadow.appendChild(this.#gitHubCornerStyle().element)
-            shadow.appendChild(this.#gitHubCornerLink(this.#config).element)
+            shadow.appendChild(this.#gitHubCornerLink().element)
         }
 
         #yagcStyle = () => {
@@ -42,14 +42,14 @@ ya-gc {
             }
         }
 
-        #gitHubCornerLink = config => {
-            const { url, openInNewWindow } = config;
+        #gitHubCornerLink = () => {
+            const { url, openInNewWindow } = this.#config;
 
             const element = document.createElement('a');
             element.classList.add('ya-wc-github-corner')
             element.href = url
             element.rel = 'noopener noreferrer'
-            element.innerHTML = this.#gitHubCornerImage(config).html
+            element.innerHTML = this.#gitHubCornerImage().html
             if (openInNewWindow)
                 element.target = '_blank'
 
@@ -58,8 +58,8 @@ ya-gc {
             }
         }
 
-        #gitHubCornerImage = config => {
-            const { hexFillColor, hexColor, leftCorner } = config;
+        #gitHubCornerImage = () => {
+            const { hexFillColor, hexColor, leftCorner } = this.#config;
             const corner = `
 <svg width="80" height="80" viewBox="0 0 250 250"
     style="fill: ${hexFillColor}; color: ${hexColor}; position: absolute; border: 0;" aria-hidden="true">
