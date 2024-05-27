@@ -22,6 +22,25 @@
             this.#addCorner()
         }
 
+        #yagcStyle = () => {
+            const element = document.createElement('style');
+            element.textContent = `
+ya-gc {
+    position: absolute;
+    top: 0;
+    ${this.#custom.leftCorner ? 'left: 0;' : 'right: 0;'}
+    margin: 0;
+    height: 80px;
+    width: 80px;
+
+    z-index: 2147483647;
+}
+`
+            return {
+                element
+            }
+        }
+
         #addWcStyle = () => {
             const styleEl = document.createElement('style');
             styleEl.textContent = `
