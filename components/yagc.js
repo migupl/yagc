@@ -13,10 +13,11 @@
 
         constructor() {
             super()
-            this.#shadow = this.attachShadow({ mode: 'open' })
         }
 
         connectedCallback() {
+            this.#shadow = this.attachShadow({ mode: 'open' })
+
             this.#setCustomAttributes()
             this.#addWcStyle()
             this.#addCorner()
