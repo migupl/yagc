@@ -10,8 +10,14 @@
 
         connectedCallback() {
             this.#shadow = this.attachShadow({ mode: 'open' })
+            this.#custom = {
+                hexFillColor: this.getAttribute('hexFillColor') || defaultConfig.hexFillColor,
+                hexColor: this.getAttribute('hexColor') || defaultConfig.hexColor,
+                leftCorner: this.hasAttribute('leftCorner'),
+                openInNewWindow: this.hasAttribute('openInNewWindow'),
+                url: this.getAttribute('url') || defaultConfig.url
+            }
 
-            this.#setCustomAttributes()
             this.#addWcStyle()
             this.#addCorner()
         }
@@ -113,16 +119,6 @@ ya-gc {
 }
 `
             this.#shadow.appendChild(styleEl)
-        }
-
-        #setCustomAttributes = () => {
-            this.#custom = {
-                hexFillColor: this.getAttribute('hexFillColor') || defaultConfig.hexFillColor,
-                hexColor: this.getAttribute('hexColor') || defaultConfig.hexColor,
-                leftCorner: this.hasAttribute('leftCorner'),
-                openInNewWindow: this.hasAttribute('openInNewWindow'),
-                url: this.getAttribute('url') || defaultConfig.url
-            }
         }
     }
 
