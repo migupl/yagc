@@ -1,15 +1,8 @@
-;(() => {
+;((defaultConfig) => {
     class YaGc extends HTMLElement {
 
         #shadow;
         #custom = {};
-        defaultConfig = {
-            hexColor: '#fff',
-            hexFillColor: '#151513',
-            leftCorner: false,
-            openInNewWindow: false,
-            url: 'https://github.com/'
-        };
 
         constructor() {
             super()
@@ -124,14 +117,20 @@ ya-gc {
 
         #setCustomAttributes = () => {
             this.#custom = {
-                hexFillColor: this.getAttribute('hexFillColor') || this.defaultConfig.hexFillColor,
-                hexColor: this.getAttribute('hexColor') || this.defaultConfig.hexColor,
+                hexFillColor: this.getAttribute('hexFillColor') || defaultConfig.hexFillColor,
+                hexColor: this.getAttribute('hexColor') || defaultConfig.hexColor,
                 leftCorner: this.hasAttribute('leftCorner'),
                 openInNewWindow: this.hasAttribute('openInNewWindow'),
-                url: this.getAttribute('url') || this.defaultConfig.url
+                url: this.getAttribute('url') || defaultConfig.url
             }
         }
     }
 
     customElements.define('ya-gc', YaGc)
-})();
+})({
+    hexColor: '#fff',
+    hexFillColor: '#151513',
+    leftCorner: false,
+    openInNewWindow: false,
+    url: 'https://github.com/'
+});
