@@ -21,7 +21,7 @@
             this.appendChild(this.#yagcStyle().element)
 
             this.#shadow.appendChild(this.#gitHubCornerStyle().element)
-            this.#addGithubCorner()
+            this.#shadow.appendChild(this.#gitHubCornerLink(this.#custom).element)
         }
 
         #yagcStyle = () => {
@@ -57,19 +57,6 @@ ya-gc {
             return {
                 element
             }
-        }
-
-        #addGithubCorner = () => {
-            const { url, openInNewWindow } = this.#custom;
-            const anchorEl = document.createElement('a');
-            anchorEl.classList.add('ya-wc-github-corner')
-            anchorEl.href = url
-            anchorEl.rel = 'noopener noreferrer'
-            anchorEl.innerHTML = this.#gitHubCornerImage(this.#custom).html
-            if (openInNewWindow)
-                anchorEl.target = '_blank'
-
-            this.#shadow.appendChild(anchorEl)
         }
 
         #gitHubCornerImage = config => {
