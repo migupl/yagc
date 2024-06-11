@@ -8,18 +8,14 @@ Good luck and I hope you enjoy it.
 
 ## Install
 
-Copy the JavaScript file */components/yagc.js* to any directory in your project.
-
 ## Getting started
 
-To get started you need to import the Web Component
+To get started you need to import the Web Component from CDN
 
 ```html
-<head>
-    <script type="module" src="./components/yagc.js"></script>
-</head>
 <body>
     <ya-gc></ya-gc>
+    <script src="https://cdn.jsdelivr.net/gh/migupl/yagc/dist/yagc-0.1.0.min.js"></script>
 </body>
 ```
 
@@ -41,11 +37,9 @@ Web Component *yagc* allows the following attributes:
 The following HTML code
 
 ```html
-<head>
-    <script type="module" src="./components/yagc.js"></script>
-</head>
 <body>
     <ya-gc leftCorner></ya-gc>
+    <script src="https://cdn.jsdelivr.net/gh/migupl/yagc/dist/yagc-0.1.0.min.js"></script>
 </body>
 ```
 
