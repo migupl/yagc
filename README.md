@@ -10,13 +10,12 @@ Good luck and I hope you enjoy it.
 
 ## Getting started
 
-You can self-hosted by copying the `dist/yagc-0.2.0.min.js` file or using it from a CDN in the following way
+You can self-hosted by copying the `components/yagc.min.js` file
 
 ```html
 <body>
     <ya-gc></ya-gc>
-    <script src="https://cdn.jsdelivr.net/gh/migupl/yagc/dist/yagc-0.2.0.min.js"
-        integrity="sha256-uKsbXn8aTcgdDhogyq9LVOXglfok6kohW7Vz1S+lMlU=" crossorigin="anonymous"></script>
+    <script src="/path/to/yagc.min.js"></script>
 </body>
 ```
 
@@ -40,8 +39,7 @@ The following HTML code
 ```html
 <body>
     <ya-gc left-corner></ya-gc>
-    <script src="https://cdn.jsdelivr.net/gh/migupl/yagc/dist/yagc-0.2.0.min.js"
-        integrity="sha256-uKsbXn8aTcgdDhogyq9LVOXglfok6kohW7Vz1S+lMlU=" crossorigin="anonymous"></script>
+    <script src="/path/to/yagc.min.js"></script>
 </body>
 ```
 
